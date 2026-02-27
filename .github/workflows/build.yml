@@ -21,7 +21,7 @@ jobs:
         run: pip install pyinstaller colorama
 
       - name: Build EXE
-        run: pyinstaller --onefile --noconsole --hidden-import=colorama ZWIN_Optimizer.py
+        run: pyinstaller pyinstaller --onefile ZWIN_Optimizer.py
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
