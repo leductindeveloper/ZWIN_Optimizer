@@ -18,10 +18,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install PyInstaller
-        run: pip install pyinstaller
+        run: pip install pyinstaller colorama
 
       - name: Build EXE
-        run: pyinstaller --onefile --noconsole ZWIN_Optimizer.py
+        run: pyinstaller --onefile --noconsole --hidden-import=colorama ZWIN_Optimizer.py
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
